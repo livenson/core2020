@@ -4,3 +4,6 @@ sysctl_overwrite:
   net.ipv6.conf.all.disable_ipv6: 0
   net.ipv6.conf.default.disable_ipv6: 0
   net.ipv4.ip_forward: 1
+
+
+firewall_forward_allow: true

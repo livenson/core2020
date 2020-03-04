@@ -1,0 +1,13 @@
+- hosts: all
+  user: bt03
+
+  pre_tasks:
+  - set_fact:
+      firewall_forward_allow: "{{ firewall_forward_allow | default('false') }}"
+
+  tasks:
+  - name: Create iptables file
+    template:
+      src: iptables.template
+      dest: "{{ playbook_dir }}/files/iptables/{{ hostname }}.iptables"
+    delegate_to: localhost
