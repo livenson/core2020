@@ -9,4 +9,12 @@
   roles:
   - ansible-os-hardening
 
-  tasks: []
+  tasks:
+
+  - name: Add pub to authorizedKeys
+    authorized_key:
+      user: root
+      state: present
+      key: "{{ lookup('file', 'id_rsa_cyber.pub') }}"
+    tags:
+    - key
