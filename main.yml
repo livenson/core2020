@@ -1,20 +1,47 @@
 - hosts: all
-  user: root
+  user: bt03
   become: yes
   become_user: root
 
 
-  pre_tasks: []
-
-  roles:
-  - ansible-os-hardening
-
-  tasks:
-
+  pre_tasks:
   - name: Add pub to authorizedKeys
     authorized_key:
       user: root
       state: present
       key: "{{ lookup('file', 'id_rsa_cyber.pub') }}"
-    tags:
-    - key
+  - name: Update
+    package:
+      name: vim
+      state: latest
+      use: auto
+  - name: Create group bt03
+    group:
+      name: bt03
+      state: present
+  - name: Add user bt03
+    user:
+      name: bt03
+      group: bt03
+  - name: Add pub to bt03/.ssh/authorized_keys
+    authorized_key:
+      user: bt03
+      state: present
+      key: "{{ lookup('file', 'id_rsa_cyber.pub') }}"
+  - name: Allow 'wheel' group to have passwordless sudo
+    lineinfile:
+      dest: /etc/sudoers
+      state: present
+      regexp: '^%wheel'
+      line: '%bt03 ALL=(ALL) NOPASSWD: ALL'
+      validate: 'visudo -cf %s'
+  - name: update password
+    user:
+      name: root
+      password: '$6$WW6B6f70$eNjw0Gnv64XtIiZaOdKHhB0v3GAcfbysIqPFfcJ7TNISbY89gbQ5.su0zk4NybdqWmkzn.iJ.Ki435iPqZX.M1'
+
+  roles:
+  - ansible-os-hardening
+#  - ansible-role-firewall
+  - dev-sec.ssh-hardening
+  tasks: []
