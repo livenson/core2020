@@ -7,6 +7,6 @@
   pre_tasks: []
 
   roles:
-  - dev-sec.os-hardening
+  - ansible-os-hardening
 
   tasks: []
