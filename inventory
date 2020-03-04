@@ -1,53 +1,53 @@
 [DMZ]
-10.3.1.2
-10.3.1.3
-10.3.1.4
-10.3.1.5
-10.3.1.6
-10.3.1.7
+10.3.1.2 hostname=dns1.ic03.jc.crp
+10.3.1.3 hostname=dns2.ic03.jc.crp
+10.3.1.4 hostname=mail.ic03.jc.crp
+10.3.1.5 hostname=www.ic03.jc.crp
+10.3.1.6 hostname=vpn.ic03.jc.crp
+10.3.1.7 hostname=gallery.ic03.jc.crp
 
 [INT]
-10.3.2.5
-10.3.2.6
-10.3.2.7
-10.3.2.8
-10.3.2.9
-10.3.2.10
-10.3.2.31
-10.3.2.32
-10.3.2.33
-10.3.2.34
-10.3.2.35
-10.3.2.36
+10.3.2.5 hostname=mariadb.ic03.jc.crp
+10.3.2.6 hostname=nagios.ic03.jc.crp
+10.3.2.7 hostname=puppet.ic03.jc.crp
+10.3.2.8 hostname=secret.ic03.jc.crp
+10.3.2.9 hostname=ipam.ic03.jc.crp
+10.3.2.10 hostname=mgmt-host.ic03.jc.crp
+10.3.2.31 hostname=ws3-1.ic03.jc.crp
+10.3.2.32 hostname=ws3-2.ic03.jc.crp
+10.3.2.33 hostname=ws3-3.ic03.jc.crp
+10.3.2.34 hostname=ws3-4.ic03.jc.crp
+10.3.2.35 hostname=ws3-5.ic03.jc.crp
+10.3.2.36 hostname=ws3-6.ic03.jc.crp
 
 [SEC]
-10.3.3.2
-10.3.3.3
-10.3.3.4
-10.3.3.5
+10.3.3.2 hostname=nessus.ic03.jc.crp
+10.3.3.3 hostname=moloch.ic03.jc.crp
+10.3.3.4 hostname=onion.ic03.jc.crp
+10.3.3.5 hostname=kali.ic03.jc.crp
 
 [LAN]
-10.3.5.3
+10.3.5.3 hostname=main-dev.lan.sc03.jc.crp
 
 [DEV]
-10.3.6.2
-10.3.6.3
-10.3.6.5
+10.3.6.2 hostname=git.dev.sc03.jc.crp
+10.3.6.3 hostname=iot-mgmt.dev.sc03.jc.crp
+10.3.6.5 hostname=build.dev.sc03.jc.crp
 
 [PUBLIC]
-10.3.7.2
-10.3.7.4
-10.3.7.5
-10.3.7.6
-10.3.7.7
+10.3.7.2 hostname=www.sc03.jc.crp
+10.3.7.4 hostname=bugs.sc03.jc.crp
+10.3.7.5 hostname=wiki.sc03.jc.crp
+10.3.7.6 hostname=owncloud.sc03.jc.crp
+10.3.7.7 hostname=blog.sc03.jc.crp
 
 [CLOUD]
-10.101.0.33
-10.101.0.53
+10.101.0.33 hostname=www.customer03.jc.crp
+10.101.0.53 hostname=test.ic03.jc.crp
 
 [CI]
-10.3.10.2
-10.3.10.3
+10.3.10.2 hostname=hmi.ics.ci03.jc.crp
+10.3.10.3 hostname=historian.ics.ci03.jc.crp
 
 [docker]
 
@@ -60,4 +60,4 @@
 
 [test]
 
-193.40.11.148
+193.40.11.148 hostname=ab.test
