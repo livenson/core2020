@@ -1,0 +1,12 @@
+- hosts: all
+  user: root
+  become: yes
+  become_user: root
+
+
+  pre_tasks: []
+
+  roles:
+  - dev-sec.os-hardening
+
+  tasks: []
