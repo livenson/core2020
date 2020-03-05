@@ -2,3 +2,9 @@
 	path = roles/dev-sec.ssh-hardening
 	url = git@github.com:dev-sec/ansible-ssh-hardening.git
 
+[submodule "roles/ansible-role-firewall"]
+	path = roles/ansible-role-firewall
+	url = git@github.com:geerlingguy/ansible-role-firewall.git
+[submodule "roles/ansible-os-hardening"]
+	path = roles/ansible-os-hardening
+	url = git@github.com:dev-sec/ansible-os-hardening.git
