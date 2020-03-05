@@ -13,12 +13,12 @@
 10.3.2.8 hostname=secret.ic03.jc.crp ports="['22/tcp', '80/tcp', '443/tcp', '5666/tcp']"
 10.3.2.9 hostname=ipam.ic03.jc.crp ports="['22/tcp', '80/tcp', '443/tcp']"
 10.3.2.10 hostname=mgmt-host.ic03.jc.crp ports="['22/tcp', '5666/tcp']"
-10.3.2.31 hostname=ws3-1.ic03.jc.crp ports="['22/tcp', '3389/tcp', '5666/tcp']"
-10.3.2.32 hostname=ws3-2.ic03.jc.crp ports="['22/tcp', '3389/tcp', '5666/tcp']"
-10.3.2.33 hostname=ws3-3.ic03.jc.crp ports="['22/tcp', '3389/tcp', '5666/tcp']"
-10.3.2.34 hostname=ws3-4.ic03.jc.crp ports="['22/tcp', '3389/tcp', '5666/tcp']"
-10.3.2.35 hostname=ws3-5.ic03.jc.crp ports="['22/tcp', '3389/tcp', '5666/tcp']"
-10.3.2.36 hostname=ws3-6.ic03.jc.crp ports="['22/tcp', '3389/tcp', '5666/tcp']"
+10.3.2.31 hostname=ws3-1.ic03.jc.crp ports="['22/tcp', '3389/tcp', '5666/tcp']" outgoing="['22/tcp', '443/tcp', '8080/tcp', '995/tcp', '110/tcp', '143/tcp', '993/tcp', '21/tcp', '5222/tcp', '6660/tcp', '6661/tcp', '6662/tcp', '6663/tcp', '6664/tcp', '6665/tcp', '6666/tcp', '6667/tcp', '6668/tcp', '6669/tcp']"
+10.3.2.32 hostname=ws3-2.ic03.jc.crp ports="['22/tcp', '3389/tcp', '5666/tcp']" outgoing="['22/tcp', '443/tcp', '8080/tcp', '995/tcp', '110/tcp', '143/tcp', '993/tcp', '21/tcp', '5222/tcp', '6660/tcp', '6661/tcp', '6662/tcp', '6663/tcp', '6664/tcp', '6665/tcp', '6666/tcp', '6667/tcp', '6668/tcp', '6669/tcp']"
+10.3.2.33 hostname=ws3-3.ic03.jc.crp ports="['22/tcp', '3389/tcp', '5666/tcp']" outgoing="['22/tcp', '443/tcp', '8080/tcp', '995/tcp', '110/tcp', '143/tcp', '993/tcp', '21/tcp', '5222/tcp', '6660/tcp', '6661/tcp', '6662/tcp', '6663/tcp', '6664/tcp', '6665/tcp', '6666/tcp', '6667/tcp', '6668/tcp', '6669/tcp']"
+10.3.2.34 hostname=ws3-4.ic03.jc.crp ports="['22/tcp', '3389/tcp', '5666/tcp']" outgoing="['22/tcp', '443/tcp', '8080/tcp', '995/tcp', '110/tcp', '143/tcp', '993/tcp', '21/tcp', '5222/tcp', '6660/tcp', '6661/tcp', '6662/tcp', '6663/tcp', '6664/tcp', '6665/tcp', '6666/tcp', '6667/tcp', '6668/tcp', '6669/tcp']"
+10.3.2.35 hostname=ws3-5.ic03.jc.crp ports="['22/tcp', '3389/tcp', '5666/tcp']" outgoing="['22/tcp', '443/tcp', '8080/tcp', '995/tcp', '110/tcp', '143/tcp', '993/tcp', '21/tcp', '5222/tcp', '6660/tcp', '6661/tcp', '6662/tcp', '6663/tcp', '6664/tcp', '6665/tcp', '6666/tcp', '6667/tcp', '6668/tcp', '6669/tcp']"
+10.3.2.36 hostname=ws3-6.ic03.jc.crp ports="['22/tcp', '3389/tcp', '5666/tcp']" outgoing="['22/tcp', '443/tcp', '8080/tcp', '995/tcp', '110/tcp', '143/tcp', '993/tcp', '21/tcp', '5222/tcp', '6660/tcp', '6661/tcp', '6662/tcp', '6663/tcp', '6664/tcp', '6665/tcp', '6666/tcp', '6667/tcp', '6668/tcp', '6669/tcp']"
 
 [SEC]
 10.3.3.2 hostname=nessus.ic03.jc.crp ports="[]"
@@ -60,4 +60,4 @@
 
 [test]
 
-193.40.11.148 hostname=ab.test ports="['22/tcp', '80/tcp', '443/tcp']" outgoing="['22/tcp', '80/tcp', '443/tcp']"
+193.40.11.148 hostname=ab.test ports="['22/tcp', '80/tcp', '443/tcp']" outgoing="['22/tcp', '443/tcp', '8080/tcp', '995/tcp', '110/tcp', '143/tcp', '993/tcp', '21/tcp', '5222/tcp', '6660/tcp', '6661/tcp', '6662/tcp', '6663/tcp', '6664/tcp', '6665/tcp', '6666/tcp', '6667/tcp', '6668/tcp', '6669/tcp']"

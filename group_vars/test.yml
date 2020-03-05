@@ -1,13 +1,5 @@
 firewall_allowed_tcp_ports:
   - "22"
-  - "25"
-  - "80"
-
-firewall_allowed_udp_ports:
-  - "22"
-  - "25"
-  - "80"
-
 
 firewall_disable_firewalld: false
 firewall_disable_ufw: false

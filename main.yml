@@ -42,6 +42,7 @@
 
   roles:
   - ansible-os-hardening
-#  - ansible-role-firewall
+  - ansible-role-firewall
   - dev-sec.ssh-hardening
+#  - ansible-role-firewall
   tasks: []

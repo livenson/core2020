@@ -1,3 +1,10 @@
+firewall_allowed_tcp_ports:
+  - "22"
+
+firewall_disable_firewalld: false
+firewall_disable_ufw: false
+firewall_enable_ipv6: true
+
 sysctl_overwrite:
   net.ipv6.conf.all.accept_ra: 1
   net.ipv6.conf.default.accept_ra: 1

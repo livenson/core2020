@@ -11,3 +11,9 @@
       src: iptables.template
       dest: "{{ playbook_dir }}/files/iptables/{{ hostname }}.iptables"
     delegate_to: localhost
+
+  - name: Copy
+    copy:
+      src: "{{ playbook_dir }}/files/iptables/{{ hostname }}.iptables"
+      dest: "/etc/iptables.bash"
+    become: yes

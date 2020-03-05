@@ -35,9 +35,17 @@ iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -p {{ port.split("/")[1] }} -m {{ port.split("/")[1] }} --dport {{ port.split("/")[0] }} -j ACCEPT
 {% endfor %}
 
+{% if outgoing is defined %}
 {% for port in outgoing %}
   iptables -A OUTPUT -p {{ port.split("/")[1] }} -m {{ port.split("/")[1] }} --dport {{ port.split("/")[0] }} -j ACCEPT
 {% endfor %}
+{% endif %}
+
+{% if extra_firewall_rules is defined %}
+{% for rule in extra_firewall_rules %}
+  iptables {{ rule }}
+{% endfor %}
+{% endif %}
 
 iptables -A OUTPUT -p icmp -j ACCEPT
 iptables -A OUTPUT -d 10.3.1.2 -p tcp -m tcp --dport 53 -j ACCEPT
@@ -90,10 +98,17 @@ if [ -x "$(which ip6tables 2>/dev/null)" ]; then
 {% for port in ports %}
   ip6tables -A INPUT -p {{ port.split("/")[1] }} -m {{ port.split("/")[1] }} --dport {{ port.split("/")[0] }} -j ACCEPT
 {% endfor %}
-
+{% if outgoing is defined %}
 {% for port in outgoing %}
   ip6tables -A OUTPUT -p {{ port.split("/")[1] }} -m {{ port.split("/")[1] }} --dport {{ port.split("/")[0] }} -j ACCEPT
 {% endfor %}
+{% endif %}
+
+{% if extra_firewall_rules is defined %}
+{% for rule in extra_firewall_rules %}
+  ip6tables {{ rule }}
+{% endfor %}
+{% endif %}
 
   ip6tables -A OUTPUT -p icmp -j ACCEPT
   ip6tables -A OUTPUT -d fd01:10:3:1::2 -p tcp -m tcp --dport 53 -j ACCEPT
